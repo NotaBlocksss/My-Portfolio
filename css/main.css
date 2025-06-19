@@ -107,9 +107,11 @@ header {
 }
 
 .hero-image {
-    display: flex;
-    max-width: 10rem;
-    border-radius: 50%;
+    width: 24rem;
+    border-radius: 10rem;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+
 }
 
 .hero-content {
