@@ -58,3 +58,32 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('#fade-in').forEach(element => {
     observer.observe(element);
 });
+
+
+const logos = [
+    "https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff",
+    "https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff",
+    "https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000",
+    "https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff",
+    "https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000",
+    "https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=fff"
+];
+
+const cinta = document.getElementById('cinta');
+
+// Insertar logos suficientes para garantizar que el bucle nunca se corte
+for (let i = 0; i < 10; i++) {
+    logos.forEach(src => {
+        const img = document.createElement('img');
+        img.className = 'item';
+        img.src = src;
+        img.alt = '';
+        cinta.appendChild(img);
+    });
+}
+
+
+
+document.getElementById('ir').addEventListener('click', function () {
+    window.location.href = 'https://wa.me/573228739153';
+});
